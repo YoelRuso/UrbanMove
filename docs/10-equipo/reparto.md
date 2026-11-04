@@ -59,3 +59,18 @@ Oussama y Sergio.
 > PENDIENTE: revisar que el reparto final quede equilibrado (§12, rúbrica): con los cinco opcionales y las piezas complejas, Joel acumula mucha más carga que los demás.
 
 > PENDIENTE: actualizar el campo `responsable` del frontmatter de cada fichero del vault.
+
+## Propuesta de reparto
+
+**Pendiente de acordar.** No sustituye al reparto real de arriba.
+
+| | Joel | Oussama | Sergio |
+|---|---|---|---|
+| Obligatorios (§14) | [Reservas](../02-servicios/reservas.md), [Viajes](../02-servicios/viajes.md), [Disponibilidad](../02-servicios/disponibilidad.md), [Inventario](../02-servicios/inventario-de-recursos.md) | [Identidad](../02-servicios/identidad.md), [Mantenimiento](../02-servicios/ordenes-de-mantenimiento.md), [Recolocación](../02-servicios/ordenes-de-recolocacion.md) | [Historial](../02-servicios/historial.md), [Analítica](../02-servicios/analitica-operacional.md), [Perfiles](../02-servicios/perfiles-de-usuario.md) |
+| Opcionales | [Zonas](../02-servicios/catalogo-de-zonas.md) | [Incidencias](../02-servicios/incidencias.md), [Adquisiciones](../02-servicios/adquisiciones.md) | [Telemetría](../02-servicios/bateria-y-telemetria.md), [Notificaciones](../02-servicios/notificaciones.md) |
+| Total de microservicios | 5 | 5 | 5 |
+| Lambdas | [Expiración](../04-lambdas/expiracion-de-reservas.md), [Ingesta](../04-lambdas/ingesta-analitica.md) | [Detección](../04-lambdas/deteccion-de-mantenimiento.md), [Recolocación](../04-lambdas/recolocacion.md) | [Data marts](../04-lambdas/construccion-de-data-marts.md) |
+| Interfaz | App de usuarios | App de mantenimiento | Dashboard |
+| Datos | [Data Lake](../05-datos/data-lake.md) | | [Data marts](../05-datos/data-marts.md) |
+
+> PENDIENTE: revisar esta propuesta en el grupo y, si se acepta, trasladarla al reparto real.
