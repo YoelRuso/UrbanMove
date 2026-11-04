@@ -1,0 +1,59 @@
+# Secretos y configuración local (§17 del enunciado)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+credentials
+.aws/
+
+# Claude Code: ajustes personales
+.claude/settings.local.json
+.claude/worktrees/
+
+# Ficheros generados por la skill archify
+.archify/
+
+# Obsidian: estado personal del vault
+docs/.obsidian/workspace*.json
+docs/.obsidian/cache
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfplan
+
+# Java y Maven
+target/
+*.class
+hs_err_pid*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node y Vite
+node_modules/
+dist/
+coverage/
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editores y sistema operativo
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
