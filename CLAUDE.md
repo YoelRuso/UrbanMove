@@ -11,7 +11,7 @@ El vault `docs/` es la base de información del proyecto y lo que hay que leer a
 1. Abre `docs/README.md` y lee los ficheros que su tabla "Qué leer según la tarea" indique.
 2. Si dos fuentes se contradicen, manda el enunciado (`docs/urbanmove.pdf`, citado como "§N"), luego
    `docs/10-equipo/acuerdos.md`, luego los ADR de `docs/08-adr/` y por último las fichas.
-3. No uses `docs/10-equipo/propuesta-bloqueantes.md`: está archivada.
+3. No uses `archivo/propuesta-bloqueantes.md`: está archivada.
 
 No copies aquí el stack, las versiones ni las normas: están en el vault.
 

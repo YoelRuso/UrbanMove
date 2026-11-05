@@ -27,7 +27,7 @@ Si dos fuentes se contradicen, manda la primera de esta lista y señala la contr
 4. **Fichas en borrador:** el resto de `docs/`. Una marca `> PENDIENTE: ...` es una decisión
    abierta, no un dato.
 
-`docs/10-equipo/propuesta-bloqueantes.md` está archivada: no la uses como fuente.
+`archivo/propuesta-bloqueantes.md` está archivada: no la uses como fuente.
 
 Antes de responder, abre `docs/README.md` y lee los ficheros que su tabla "Qué leer según la
 tarea" indique. No afirmes qué dice el vault sin haberlo leído en esta ejecución: puede haber

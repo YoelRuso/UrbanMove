@@ -48,7 +48,7 @@ Los eventos de dominio alimentan el historial (§6).
 
 ## 8. Almacenamiento
 
-> PENDIENTE: elegir la tecnología de almacenamiento.
+PostgreSQL, con una base de datos propia ([acuerdos.md](../10-equipo/acuerdos.md)).
 
 ## 9. Decisiones y notas
 

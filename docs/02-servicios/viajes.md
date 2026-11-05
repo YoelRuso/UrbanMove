@@ -48,14 +48,15 @@ recurso") y `RideFinished` ("Finalización del viaje y liberación o cambio de e
 
 ## 8. Almacenamiento
 
-> PENDIENTE: elegir la tecnología de almacenamiento.
+PostgreSQL, con una base de datos propia ([acuerdos.md](../10-equipo/acuerdos.md)).
 
 ## 9. Decisiones y notas
 
 - Debe poder escalar horizontalmente (§7.2).
 - La analítica de demanda no debe bloquear el inicio ni el fin de viaje (§7.2).
 - Ejemplo de degradación funcional: permitir finalizar un viaje aunque el servicio de
-  recomendaciones no esté disponible (§7.1).
+  recomendaciones no esté disponible (§7.1). UrbanMove no tiene ese servicio: es solo un ejemplo
+  del enunciado.
 - Candidato a vista de componentes en el PDF (§4.2) y a diagrama de secuencia de inicio de viaje.
 - La sección 2 menciona la "facturación simulada" como posible data mart; aquí solo se calcula
   un coste preliminar.

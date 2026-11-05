@@ -23,14 +23,17 @@ responsable: PENDIENTE
 | Capa | Componentes | Detalle |
 |---|---|---|
 | Clientes | App de usuarios finales, app de mantenimiento y operaciones, dashboard operativo | [apps-cliente.md](apps-cliente.md) |
-| Microservicios | 15 servicios descritos en §4.1 (mínimo 10) | [02-servicios](../02-servicios/README.md) |
+| Microservicios | 15 servicios descritos en §4.1 (mínimo 10; falta confirmar los 5 opcionales) | [02-servicios](../02-servicios/README.md) |
 | Mensajería | Bus, cola o tópico de eventos de dominio | [03-eventos](../03-eventos/README.md) |
-| Serverless | 5 Lambdas descritas en §4.3 (mínimo 3) | [04-lambdas](../04-lambdas/README.md) |
+| Serverless | 5 Lambdas descritas en §4.3 (mínimo 3; falta decidir cuáles se implementan) | [04-lambdas](../04-lambdas/README.md) |
 | Analítica | Data Lake (raw/trusted/curated) y data marts | [data-lake.md](../05-datos/data-lake.md), [data-marts.md](../05-datos/data-marts.md) |
 
-## Cómo se relacionan (según el enunciado)
+## Cómo se relacionan
 
-1. Las apps cliente consumen las APIs de los microservicios.
+Según el enunciado, salvo el punto 1.
+
+1. Las apps cliente usan los microservicios. El enunciado no dice si es directamente o a través
+   de un gateway o BFF: está pendiente (ver abajo).
 2. Los microservicios emiten **eventos de dominio**. Esos eventos alimentan procesos
    asíncronos, Lambdas, el historial, el Data Lake y los data marts (§6).
 3. La Lambda de ingesta copia o transforma eventos hacia el Data Lake (§4.3).
@@ -42,9 +45,17 @@ responsable: PENDIENTE
 7. Historial es un servicio independiente que consulta el histórico de reservas, viajes,
    incidencias, mantenimiento y operaciones (§4.1).
 
-## Decisiones abiertas
+## Decisiones
 
-El bus de eventos es SNS + SQS (ver [ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)).
+**Acordado** ([acuerdos.md](../10-equipo/acuerdos.md)): microservicios en Java con Spring Boot y Maven,
+Lambdas en Python, y PostgreSQL con una base de datos por servicio con estado.
+
+**Propuesto, sin aceptar:**
+
+- Bus de eventos con SNS + SQS ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)).
+- Una sola instancia RDS compartida ([ADR 0003](../08-adr/0003-una-instancia-rds-con-una-base-de-datos-por-servicio.md)).
+
+**Abierto:**
 
 > PENDIENTE: decidir si existe un API Gateway o un BFF delante de los microservicios.
 
@@ -52,11 +63,7 @@ El bus de eventos es SNS + SQS (ver [ADR 0002](../08-adr/0002-bus-de-eventos-con
 
 > PENDIENTE: decidir qué sistemas externos simulados existen (p. ej. pagos o facturación simulada, telemetría) y sus límites.
 
-Los microservicios se escriben en Java con Spring Boot y Maven, y las Lambdas en Python. Cada
-servicio con estado tiene su propia base de datos PostgreSQL dentro de una instancia RDS
-compartida
-([ADR 0003](../08-adr/0003-una-instancia-rds-con-una-base-de-datos-por-servicio.md)). Ver
-[infraestructura.md](../07-devops/infraestructura.md).
+Más detalle en [infraestructura.md](../07-devops/infraestructura.md).
 
 ## Diagramas requeridos (§4.2, §13)
 

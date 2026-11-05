@@ -15,16 +15,16 @@ Hay que incorporar **al menos cuatro**:
 
 | Mecanismo | ¿Se usa? | Dónde |
 |---|---|---|
-| Reintentos controlados para llamadas o procesamiento de eventos | Sí | Reentrega de SQS a cada consumidor antes de pasar a la DLQ ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
-| Colas o tópicos para desacoplar microservicios y evitar pérdida de eventos | Sí | Tópicos SNS por dominio y una cola SQS por consumidor ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
-| Dead-letter queue o almacenamiento de eventos fallidos para su revisión | Sí | Una DLQ por cola de consumidor ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
-| Operaciones idempotentes para evitar duplicados al reprocesar mensajes | Sí | Consumidores que descartan `eventId` repetidos ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
+| Reintentos controlados para llamadas o procesamiento de eventos | Propuesto | Reentrega de SQS a cada consumidor antes de pasar a la DLQ ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
+| Colas o tópicos para desacoplar microservicios y evitar pérdida de eventos | Propuesto | Tópicos SNS por dominio y una cola SQS por consumidor ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
+| Dead-letter queue o almacenamiento de eventos fallidos para su revisión | Propuesto | Una DLQ por cola de consumidor ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
+| Operaciones idempotentes para evitar duplicados al reprocesar mensajes | Propuesto | Consumidores que descartan los eventos repetidos por su identificador ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
 | Timeouts y gestión explícita de errores entre microservicios | PENDIENTE | PENDIENTE |
-| Degradación funcional (p. ej. finalizar un viaje aunque el servicio de recomendaciones no esté disponible) | PENDIENTE | PENDIENTE |
+| Degradación funcional (p. ej. finalizar un viaje aunque un servicio secundario no esté disponible; el enunciado cita uno de recomendaciones, que UrbanMove no tiene) | PENDIENTE | PENDIENTE |
 | Health checks en microservicios y reinicio automático de contenedores | PENDIENTE | PENDIENTE |
-| Persistencia de eventos críticos antes de ejecutar procesamiento secundario | Sí | Outbox transaccional en los productores ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
+| Persistencia de eventos críticos antes de ejecutar procesamiento secundario | Propuesto | Outbox transaccional en los productores ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)) |
 
-Con los cinco mecanismos marcados ya se cubre el mínimo de cuatro.
+Si se acepta el ADR 0002, estos cinco mecanismos cubrirían el mínimo de cuatro.
 
 > PENDIENTE: decidir si se aplican también timeouts, degradación funcional y health checks, e indicar dónde.
 

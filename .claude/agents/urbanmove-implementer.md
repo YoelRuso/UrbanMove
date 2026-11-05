@@ -18,7 +18,7 @@ bloquea, haz lo que no dependa de ello y termina con las preguntas para el equip
 1. Lee `docs/README.md` y los ficheros que su tabla "Qué leer según la tarea" indique. Si dos
    fuentes se contradicen, manda el enunciado (`docs/urbanmove.pdf`, léelo con `Read` y el
    parámetro `pages`), luego `docs/10-equipo/acuerdos.md`, luego los ADR y por último las fichas.
-   No uses `docs/10-equipo/propuesta-bloqueantes.md`: está archivada.
+   No uses `archivo/propuesta-bloqueantes.md`: está archivada.
 2. Comprueba qué existe ya en el repositorio y sigue sus convenciones. La estructura de
    `docs/06-estandares/git-y-pull-requests.md` es provisional. Crea solo lo que necesite la tarea:
    no generes el esqueleto de otros servicios ni ejecutes `git init` sin que te lo pidan.

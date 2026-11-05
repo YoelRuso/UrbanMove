@@ -19,8 +19,8 @@ responsable: PENDIENTE
   deciden por adelantado: cada miembro los resuelve en sus servicios a medida que aparecen y
   solo se llevan al grupo las decisiones que afectan a varios. Los agentes de IA no adelantan
   decisiones: ante una duda dan opciones con pros y contras.
-- [propuesta-bloqueantes.md](propuesta-bloqueantes.md) está archivada: no es la línea vigente
-  y nada de lo que contiene está acordado.
+- [La propuesta de bloqueantes](../../archivo/propuesta-bloqueantes.md) está archivada fuera del
+  vault: no es la línea vigente y nada de lo que contiene está acordado.
 
 - Stack, ramas y plataforma acordados en la reunión del 27 de octubre de 2026:
   - Microservicios en Java con Spring Boot y Maven. Lambdas en Python.
@@ -76,7 +76,7 @@ La defensa se espera en enero de 2027.
 
 > PENDIENTE: definir la herramienta de seguimiento de tareas.
 
-> PENDIENTE: definir las normas de uso de agentes de IA (qué ficheros del vault se les pasan, revisión humana obligatoria del código generado).
+> PENDIENTE: revisar y acordar las normas de uso de agentes de IA. Las actuales están en `CLAUDE.md` y `.claude/agents/`, en la raíz del repositorio.
 
 > PENDIENTE: definir el proceso para tomar decisiones de arquitectura (quién propone, quién aprueba, cuándo se crea un ADR).
 

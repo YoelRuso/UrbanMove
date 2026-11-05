@@ -21,6 +21,8 @@ responsable: Joel
 
 ## Repositorio: monorepo
 
+Repositorio privado: <https://github.com/YoelRuso/UrbanMove>.
+
 Un único repositorio GitHub con esta estructura (provisional):
 
 ```text
@@ -112,8 +114,8 @@ con su etiqueta y después se devuelve a `develop`.
 
 - **Aprobaciones:** al menos una, de alguien distinto del autor.
 - **Checks obligatorios:** el pipeline debe pasar antes de fusionar.
-- **Protección de ramas:** `main` y `develop` se protegen en GitHub (*Settings* → *Branches*)
-  para exigir PR, una aprobación y el pipeline en verde.
+- **Protección de ramas:** `main` y `develop` están protegidas en GitHub: exigen PR y una
+  aprobación, y no admiten force push ni borrado. El pipeline en verde se exigirá cuando exista.
 - **Estrategia de fusión:**
   - `feat/*` y `fix/*` → `develop`: *squash*, un commit por tarea.
   - `release/*` y `hotfix/*` → `main` y `develop`: *merge commit*.
@@ -122,7 +124,7 @@ con su etiqueta y después se devuelve a `develop`.
 
 > PENDIENTE: confirmar la convención de mensajes de commit. Propuesta: Conventional Commits (`feat: ...`, `fix: ...`, `docs: ...`), coherente con los nombres de rama.
 
-> PENDIENTE: definir las medidas para no subir secretos (gitignore, escaneo de secretos...).
+> PENDIENTE: decidir si se añade escaneo de secretos. `.gitignore` ya excluye `.env`, y `.env.example` está en el repositorio.
 
 ## Regla del vault
 

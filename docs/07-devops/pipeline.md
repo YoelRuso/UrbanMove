@@ -27,8 +27,9 @@ o artefactos y validaciones automáticas (§13.11).
 
 ## Decisiones
 
-La plataforma de CI/CD es **GitHub Actions**. Las pruebas de integración usan LocalStack con
-un token de CI guardado como secreto del repositorio
+La plataforma de CI/CD es **GitHub Actions**. Se propone que las pruebas de integración usen LocalStack
+con un token de CI guardado como secreto del repositorio, pendiente en
+[tests.md](../06-estandares/tests.md)
 ([ADR 0001](../08-adr/0001-emulacion-local-de-aws-con-localstack.md)).
 
 > PENDIENTE: definir las etapas y disparadores (push, PR, rama principal, etiquetas).
