@@ -89,6 +89,8 @@ instrucciones, a fecha de 2026-10-27 (las restricciones pueden cambiar):
 | ECS Fargate y ECR | ❌ Solo en local y en AWS normal |
 | Secrets Manager | ❌ Solo en local y en AWS normal |
 
+> PENDIENTE: decidir cómo se ejecutan los microservicios en el sandbox y qué sustituye allí a SQS.
+
 Además, por ser un entorno efímero:
 
 - **Terraform debe recrear todo** lo compatible en cada sesión con un solo `apply`, incluidas

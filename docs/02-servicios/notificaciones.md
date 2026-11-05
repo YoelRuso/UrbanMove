@@ -43,7 +43,7 @@ Avisos enviados o simulados.
 
 ## 8. Almacenamiento
 
-> PENDIENTE: elegir la tecnología de almacenamiento, si la hay.
+PostgreSQL con una base de datos propia, si persiste avisos ([acuerdos.md](../10-equipo/acuerdos.md)). Ver la sección 3.
 
 ## 9. Decisiones y notas
 

@@ -1,0 +1,3 @@
+# Oculta estos ficheros a las búsquedas de los agentes: no son fuente de información.
+archivo/
+docs/01-arquitectura/alternativas/*.html

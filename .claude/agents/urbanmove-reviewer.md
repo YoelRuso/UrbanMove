@@ -39,7 +39,7 @@ No tienes herramientas de edición. Usa `Bash` solo para inspeccionar y ejecutar
 3. Lee `docs/README.md` y los ficheros que su tabla indique para ese tipo de cambio, como mínimo la
    ficha del componente. Si hay contradicción, manda el enunciado (`docs/urbanmove.pdf`, léelo con
    `Read` y el parámetro `pages`), luego `docs/10-equipo/acuerdos.md`, luego los ADR y por último
-   las fichas. Ignora `docs/10-equipo/propuesta-bloqueantes.md`: está archivada.
+   las fichas. Ignora `archivo/propuesta-bloqueantes.md`: está archivada.
 4. Ejecuta las pruebas relacionadas si es posible. Si no, indica por qué.
 5. Si hay una skill en `.claude/skills/` para esa tecnología, cárgala con `Skill`. Para workflows de
    GitHub Actions, usa `github-actions-hardening`. Las skills son guías genéricas: si contradicen el
