@@ -6,7 +6,7 @@ responsable: PENDIENTE
 
 > **ARCHIVADO (4 nov 2026): no es la línea de trabajo vigente.** El grupo decidió definir
 > primero la arquitectura de microservicios a alto nivel y resolver los detalles técnicos a
-> medida que surjan (ver [acuerdos.md](acuerdos.md)). Este documento adelantaba decisiones
+> medida que surjan (ver [acuerdos.md](../docs/10-equipo/acuerdos.md)). Este documento adelantaba decisiones
 > que el grupo aún no ha planteado. **Nada de lo que contiene está acordado.** Se conserva
 > solo como material de consulta cuando se llegue a cada tema.
 
@@ -18,8 +18,8 @@ arquitectónica, se registra como ADR. Orden: de lo que más condiciona a lo que
 
 ## 1. Dueño del estado operativo del recurso
 
-**Propuesta: [Disponibilidad](../02-servicios/disponibilidad.md) es el dueño del estado operativo.**
-[Inventario](../02-servicios/inventario-de-recursos.md) es dueño del activo (identificador,
+**Propuesta: [Disponibilidad](../docs/02-servicios/disponibilidad.md) es el dueño del estado operativo.**
+[Inventario](../docs/02-servicios/inventario-de-recursos.md) es dueño del activo (identificador,
 tipo, modelo, fecha de compra) y de un estado administrativo con solo dos valores:
 `ACTIVE` y `RETIRED`.
 
@@ -38,7 +38,7 @@ apartado 2 y la deja registrada en logs (con el identificador de correlación).
 
 ## 2. Máquina de estados del recurso
 
-Decisiones sobre los huecos de [estados-recurso.md](../01-arquitectura/estados-recurso.md):
+Decisiones sobre los huecos de [estados-recurso.md](../docs/01-arquitectura/estados-recurso.md):
 
 - Estado inicial tras `VehiclePurchased`: `READY_FOR_SERVICE`. Un recurso nuevo se revisa
   antes de salir; `VehicleReturnedToService` lo pasa a `AVAILABLE`. Para la demo, las semillas
@@ -107,7 +107,7 @@ Dos barreras:
    en estado `CREATED` o `CONFIRMED`.
 
 Si Reservas falla después del `hold`, el `hold` caduca solo (mismo timeout que la reserva) y
-la [Lambda de expiración](../04-lambdas/expiracion-de-reservas.md) lo libera. Propuesta de
+la [Lambda de expiración](../docs/04-lambdas/expiracion-de-reservas.md) lo libera. Propuesta de
 tiempo de expiración: **10 minutos**. La operación lleva `Idempotency-Key`.
 
 Si Disponibilidad no responde, Reservas devuelve `503` y no crea la reserva (falla de forma
@@ -153,13 +153,13 @@ salvo `UserRegistered`):
 | `RelocationOrderCompleted` | Órdenes de recolocación | Historial, Disponibilidad, analítica | `orderId`, `resourceIds` |
 
 La creación de órdenes de mantenimiento a partir de `VehicleBatteryLow` la hace la
-[Lambda de detección](../04-lambdas/deteccion-de-mantenimiento.md), que llama a la API de
+[Lambda de detección](../docs/04-lambdas/deteccion-de-mantenimiento.md), que llama a la API de
 Órdenes de mantenimiento. Así el servicio sigue siendo el único dueño de sus órdenes.
 
 **Contrato:** JSON Schema, un fichero por evento en `contracts/events/<EventType>.v1.json`,
 validado en CI. No hace falta AsyncAPI (es una ampliación opcional).
 
-**Tópicos y colas** (SNS + SQS, [ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)):
+**Tópicos y colas** (SNS + SQS, [ADR 0002](../docs/08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)):
 - Un tópico por dominio productor: `urbanmove-<dominio>-events` (p. ej.
   `urbanmove-reservas-events`).
 - Una cola por consumidor y tópico: `urbanmove-<consumidor>-<dominio>-q`, con su DLQ
@@ -224,7 +224,7 @@ validado en CI. No hace falta AsyncAPI (es una ampliación opcional).
   actualizado.
 - Secretos: `.env` en `.gitignore`, `.env.example` versionado, escaneo con gitleaks en CI.
 - Versiones: Java 21 (acordado; Spring Boot 4.1 lo soporta), el resto como en
-  [acuerdos.md](acuerdos.md). Se fijan al crear el repo.
+  [acuerdos.md](../docs/10-equipo/acuerdos.md). Se fijan al crear el repo.
 
 ## 7. Reparto pendiente
 

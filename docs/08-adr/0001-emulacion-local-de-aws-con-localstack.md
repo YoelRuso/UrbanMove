@@ -14,14 +14,14 @@ responsable: Joel
 
 El sistema usa servicios gestionados de AWS: SNS y SQS para los eventos, Lambdas, Data Lake en
 S3 y bases de datos PostgreSQL. Las pruebas se hacen en AWS Academy y la defensa se despliega
-en AWS real ([despliegue.md](../07-devops/despliegue.md)). El enunciado exige además levantar
+en AWS normal ([despliegue.md](../07-devops/despliegue.md)). El enunciado exige además levantar
 el sistema en local con un único flujo de comandos (§10) y ejecutar pruebas automáticas en el
 pipeline.
 
 Hay que decidir cómo se emulan esos servicios en las máquinas del equipo y en el CI. Se quiere
 usar muchos servicios de AWS, así que el emulador no debe obligar a renunciar a ninguno
 por no poder ejecutarlo en local. Desarrollar directamente contra AWS no es viable: las
-sesiones de AWS Academy caducan y tienen límites, y AWS real tiene coste.
+sesiones de AWS Academy caducan y tienen límites, y AWS normal tiene coste.
 
 ## Alternativas
 
@@ -62,10 +62,10 @@ herramienta más madura y documentada, y el enunciado la menciona expresamente.
 ## Consecuencias
 
 - **Positivas:**
-  - Un único `docker compose up` levanta toda la infraestructura de AWS.
+  - `docker compose up` arranca el emulador y el mismo Terraform crea en él la infraestructura de AWS.
   - Se pueden usar RDS, ECS/ECR, Athena y Glue en local, lo que encaja con las ampliaciones
     de §15.
-  - El mismo Terraform sirve para local, AWS Academy y AWS real.
+  - El mismo Terraform sirve para local, AWS Academy y AWS normal.
   - El CI puede probar la integración con SNS/SQS, las Lambdas y el Data Lake.
 - **Negativas o riesgos:**
   - **Los tres miembros** deben estar verificados en GitHub Education y activar el Student

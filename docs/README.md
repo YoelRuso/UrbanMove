@@ -10,6 +10,8 @@ Este vault es la base de información compartida del grupo y de los agentes de I
 fuente de la documentación del entregable final. La única fuente de verdad es el enunciado:
 [urbanmove.pdf](urbanmove.pdf). Las referencias con la forma "§N" remiten a sus secciones.
 
+Los agentes de IA siguen además `CLAUDE.md` y `.claude/agents/`, en la raíz del repositorio.
+
 ## Mapa del vault
 
 | Carpeta | Contenido |
@@ -31,9 +33,9 @@ fuente de la documentación del entregable final. La única fuente de verdad es 
 
 | Tarea | Ficheros (en este orden) |
 |---|---|
-| Implementar o modificar un microservicio | Su ficha en [02-servicios](02-servicios/README.md), [api.md](06-estandares/api.md), [propiedad-de-datos.md](01-arquitectura/propiedad-de-datos.md), [errores-y-resiliencia.md](06-estandares/errores-y-resiliencia.md) |
+| Implementar o modificar un microservicio | Su ficha en [02-servicios](02-servicios/README.md), [api.md](06-estandares/api.md), [propiedad-de-datos.md](01-arquitectura/propiedad-de-datos.md), [errores-y-resiliencia.md](06-estandares/errores-y-resiliencia.md), [acuerdos.md](10-equipo/acuerdos.md), [infraestructura.md](07-devops/infraestructura.md) |
 | Tocar el ciclo de vida de un recurso | [estados-recurso.md](01-arquitectura/estados-recurso.md), [03-eventos/README.md](03-eventos/README.md), ficha del servicio que valida la transición |
-| Crear una Lambda | Su ficha en [04-lambdas](04-lambdas/README.md), [03-eventos/README.md](03-eventos/README.md), [errores-y-resiliencia.md](06-estandares/errores-y-resiliencia.md), [pipeline.md](07-devops/pipeline.md) |
+| Crear una Lambda | Su ficha en [04-lambdas](04-lambdas/README.md), [03-eventos/README.md](03-eventos/README.md), [errores-y-resiliencia.md](06-estandares/errores-y-resiliencia.md), [pipeline.md](07-devops/pipeline.md), [acuerdos.md](10-equipo/acuerdos.md) |
 | Añadir o cambiar un evento | [03-eventos/README.md](03-eventos/README.md), [sobre-comun.md](03-eventos/sobre-comun.md), [06-estandares/eventos.md](06-estandares/eventos.md), fichas del productor y de los consumidores |
 | Trabajar en Data Lake o data marts | [data-lake.md](05-datos/data-lake.md), [data-marts.md](05-datos/data-marts.md), [ingesta-analitica.md](04-lambdas/ingesta-analitica.md), [construccion-de-data-marts.md](04-lambdas/construccion-de-data-marts.md) |
 | Trabajar en el dashboard | [apps-cliente.md](01-arquitectura/apps-cliente.md), [analitica-operacional.md](02-servicios/analitica-operacional.md), [data-marts.md](05-datos/data-marts.md), [flujo-dashboard.md](09-flujos/flujo-dashboard.md) |
@@ -57,5 +59,5 @@ fuente de la documentación del entregable final. La única fuente de verdad es 
    wikilinks ni sintaxis de plugins.
 6. Nombres de eventos y estados en inglés, tal como aparecen en el enunciado.
 7. Todo fichero lleva el frontmatter `tipo`, `estado` y `responsable`. Al revisarlo, `estado`
-   pasa de `borrador` a `revisado`.
+   pasa de `borrador` a `revisado`. En un ADR, lo que vale es el campo **Estado** de su cuerpo.
 8. No se guardan credenciales, tokens ni identificadores sensibles en el vault (§17).

@@ -46,7 +46,7 @@ Usar **SNS + SQS** como bus de eventos, con estas reglas:
 - **DLQ por cola.** Cada cola tiene su dead-letter queue. Un mensaje que falla varias veces
   pasa a la DLQ para revisarlo y reprocesarlo, en lugar de perderse o bloquear la cola.
 - **Entrega al menos una vez y consumidores idempotentes.** SQS puede entregar un mensaje más
-  de una vez. Cada consumidor guarda el `eventId` del [sobre común](../03-eventos/sobre-comun.md)
+  de una vez. Cada consumidor guarda el identificador del evento ([sobre común](../03-eventos/sobre-comun.md))
   y descarta los repetidos.
 - **Outbox transaccional en los productores.** El servicio guarda el evento en su propia base de
   datos, en la misma transacción que el cambio de estado. Un proceso aparte lo publica en SNS.

@@ -34,8 +34,8 @@ La tabla recoge las entidades que se desprenden de la responsabilidad de cada se
 
 > PENDIENTE: decidir qué servicio es dueño del **estado operativo del recurso** (AVAILABLE, RESERVED, IN_USE...). El enunciado reparte información sobre el recurso entre Inventario ("estado administrativo"), Disponibilidad ("qué recursos pueden reservarse") y Órdenes de mantenimiento, sin decir cuál manda. Ver [estados-recurso.md](estados-recurso.md).
 
-Cada servicio con estado tiene su propia base de datos PostgreSQL y un usuario que solo tiene
-permisos sobre ella, dentro de una instancia RDS compartida
+Cada servicio con estado tiene su propia base de datos PostgreSQL ([acuerdos.md](../10-equipo/acuerdos.md)).
+Una sola instancia RDS compartida, con un usuario por servicio, es una propuesta sin aceptar
 ([ADR 0003](../08-adr/0003-una-instancia-rds-con-una-base-de-datos-por-servicio.md)).
 
 > PENDIENTE: completar la columna "Tabla / almacén" con el nombre de la base de datos y las tablas principales de cada servicio.

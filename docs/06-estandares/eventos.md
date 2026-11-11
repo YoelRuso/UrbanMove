@@ -25,10 +25,10 @@ diseñar, publicar y consumir eventos.
 
 > PENDIENTE: definir la política de versionado de esquemas (cuándo sube la versión y cómo conviven versiones).
 
-Según el [ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md):
+Según el [ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md), propuesto y sin aceptar:
 
-- **Entrega al menos una vez.** Todo consumidor es idempotente: guarda el `eventId` y descarta
-  los repetidos.
+- **Entrega al menos una vez.** Todo consumidor es idempotente: guarda el identificador del evento y
+  descarta los repetidos.
 - **Outbox transaccional.** El productor guarda el evento en su base de datos, en la misma
   transacción que el cambio de estado, y lo publica después.
 - **Una DLQ por cola de consumidor.** Los mensajes que fallan repetidamente pasan a la DLQ.

@@ -55,18 +55,15 @@ Lo alimenta principalmente [Analítica operacional](../02-servicios/analitica-op
 o se justifica qué indicadores se calculan en otro componente (§4.1). Debe actualizarse
 durante la demostración (§10).
 
-## Decisiones abiertas
+## Decisiones
 
-Las tres interfaces son apps web React separadas, creadas con Vite:
-
-| App | Responsable |
-|---|---|
-| Usuarios finales | Oussama |
-| Mantenimiento y operaciones | Joel |
-| Dashboard operativo | Sergio |
+**Acordado** ([acuerdos.md](../10-equipo/acuerdos.md)): las tres interfaces son apps web React separadas,
+creadas con Vite. Los responsables están en [reparto.md](../10-equipo/reparto.md).
 
 En el sprint 1 se hacen versiones muy básicas para comprobar que todo funciona. En el sprint 3
 se completan y se cuida el diseño (ver [acuerdos.md](../10-equipo/acuerdos.md)).
+
+**Abierto:**
 
 > PENDIENTE: decidir la fuente de cada indicador del dashboard (eventos, data marts, métricas o combinación) y justificarla.
 

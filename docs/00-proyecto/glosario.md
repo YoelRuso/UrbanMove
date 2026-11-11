@@ -44,3 +44,7 @@ responsable: PENDIENTE
 | ADR | Architecture Decision Record. Ver [08-adr](../08-adr/README.md). |
 | C4 | Modelo de diagramas de contexto, contenedores y componentes, citado en la rúbrica. |
 | DevOps / CI/CD | Integración y despliegue continuos. Ver [pipeline.md](../07-devops/pipeline.md). |
+| Sandbox | Entorno de pruebas AWS Academy Cloud Foundations. Ver [despliegue.md](../07-devops/despliegue.md). |
+| AWS normal | Cuenta de AWS estándar, para la defensa. El enunciado la llama "AWS real" (§9). |
+| Outbox | Tabla donde un servicio guarda un evento en la misma transacción que su cambio de estado, para publicarlo después. |
+| BFF | Backend for Frontend: backend dedicado a una app cliente. |

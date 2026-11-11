@@ -52,7 +52,7 @@ arquitectura y preguntas individuales (§18). Ver [09-flujos](../09-flujos/flujo
 
 El enunciado permite AWS Academy, AWS real, LocalStack o un entorno local equivalente, y pide
 justificar la decisión en el PDF (§9). El equipo desarrolla en local con LocalStack, prueba en
-AWS Academy y despliega para la defensa en AWS real (ver
+AWS Academy y despliega para la defensa en una cuenta de AWS normal (ver
 [despliegue.md](../07-devops/despliegue.md)).
 
 ## Relacionado

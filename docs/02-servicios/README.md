@@ -34,8 +34,9 @@ PDF, pero **no se pueden fusionar** reservas, viajes, historial, mantenimiento n
 
 Los diez obligatorios ya cumplen el mínimo de diez microservicios.
 
-Se implementan también los cinco servicios no obligatorios (Catálogo de zonas, Batería y
-telemetría, Incidencias, Adquisiciones y Notificaciones), previstos para el sprint 4. Ver
+Los cinco servicios no obligatorios (Catálogo de zonas, Batería y telemetría, Incidencias,
+Adquisiciones y Notificaciones) están previstos para el sprint 4, pero falta confirmar cada uno:
+su ficha lo marca como pendiente. Ver
 [reparto.md](../10-equipo/reparto.md).
 
 > PENDIENTE: decidir si se fusiona algún par de servicios de bajo riesgo y justificarlo en un ADR.

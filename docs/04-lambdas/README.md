@@ -24,8 +24,9 @@ el resto son ampliaciones valorables**, pero no dice cuáles son las obligatoria
   de 2026-10-27).
 - **Empaquetado y despliegue:** Terraform, como el resto de la infraestructura (ver
   [infraestructura.md](../07-devops/infraestructura.md)).
-- **Disparadores:** colas SQS del bus de eventos y EventBridge Scheduler para las tareas
-  programadas (ver [ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)).
+- **Disparadores:** pendientes en cada ficha. El [ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md), sin aceptar,
+  propone colas SQS y EventBridge Scheduler para las tareas programadas. En el sandbox solo se ha
+  probado crear reglas programadas de EventBridge ([despliegue.md](../07-devops/despliegue.md)).
 
 > PENDIENTE: comprobar que LocalStack ejecuta el runtime `python3.14`; si no, usar `python3.13`.
 

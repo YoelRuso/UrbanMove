@@ -1,0 +1,70 @@
+name: Publicar diagramas de arquitectura
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/01-arquitectura/alternativas/alternativa-*.html"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar el sitio (solo los diagramas, sin el resto del vault)
+        run: |
+          mkdir -p _site
+          cp docs/01-arquitectura/alternativas/alternativa-*.html _site/
+          cat > _site/index.html <<'EOF'
+          <!doctype html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>UrbanMove: arquitecturas alternativas</title>
+            <style>
+              body { font-family: system-ui, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; color: #14201b; }
+              li { margin: 12px 0; }
+              p { color: #555; }
+            </style>
+          </head>
+          <body>
+            <h1>UrbanMove: arquitecturas alternativas</h1>
+            <p>Opciones para debatir, no decisiones. Ver docs/01-arquitectura/alternativas/README.md.</p>
+            <ul>
+              <li><a href="alternativa-a-nucleo-consistente.html">A. Núcleo consistente</a></li>
+              <li><a href="alternativa-b-todo-por-eventos.html">B. Todo por eventos</a></li>
+              <li><a href="alternativa-c-una-puerta-por-app.html">C. Una puerta por app</a></li>
+            </ul>
+          </body>
+          </html>
+          EOF
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir el artefacto
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Desplegar
+        id: deployment
+        uses: actions/deploy-pages@v4

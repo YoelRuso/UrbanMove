@@ -39,8 +39,8 @@ decidirlo, se actualiza esta tabla y la ficha correspondiente en el mismo cambio
 
 > PENDIENTE: decidir el formato del contrato (tabla, JSON Schema, AsyncAPI o equivalente, §4.2) y dónde vive en el repositorio.
 
-El bus es SNS + SQS: un tópico por dominio productor y una cola con DLQ por consumidor (ver
-[ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)).
+Propuesta sin aceptar: bus con SNS + SQS, con un tópico por dominio productor y una cola con DLQ
+por consumidor ([ADR 0002](../08-adr/0002-bus-de-eventos-con-sns-y-sqs.md)).
 
 > PENDIENTE: fijar el nombre de cada tópico y de cada cola.
 
