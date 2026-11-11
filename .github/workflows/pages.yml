@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "docs/01-arquitectura/alternativas/alternativa-*.html"
+      - "docs/01-arquitectura/diagramas/*.html"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -31,14 +31,14 @@ jobs:
       - name: Preparar el sitio (solo los diagramas, sin el resto del vault)
         run: |
           mkdir -p _site
-          cp docs/01-arquitectura/alternativas/alternativa-*.html _site/
+          cp docs/01-arquitectura/diagramas/*.html _site/
           cat > _site/index.html <<'EOF'
           <!doctype html>
           <html lang="es">
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>UrbanMove: arquitecturas alternativas</title>
+            <title>UrbanMove: arquitectura</title>
             <style>
               body { font-family: system-ui, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; color: #14201b; }
               li { margin: 12px 0; }
@@ -46,12 +46,19 @@ jobs:
             </style>
           </head>
           <body>
-            <h1>UrbanMove: arquitecturas alternativas</h1>
-            <p>Opciones para debatir, no decisiones. Ver docs/01-arquitectura/alternativas/README.md.</p>
+            <h1>UrbanMove: arquitectura</h1>
+            <p>Opciones para debatir, no decisiones del equipo.</p>
+            <h2>Opciones de arquitectura (hexagonal)</h2>
             <ul>
-              <li><a href="alternativa-a-nucleo-consistente.html">A. Núcleo consistente</a></li>
-              <li><a href="alternativa-b-todo-por-eventos.html">B. Todo por eventos</a></li>
-              <li><a href="alternativa-c-una-puerta-por-app.html">C. Una puerta por app</a></li>
+              <li><a href="opcion-1-esencial.html">1. Esencial</a></li>
+              <li><a href="opcion-2-blindada.html">2. Blindada</a></li>
+              <li><a href="opcion-3-orquestada.html">3. Orquestada</a></li>
+            </ul>
+            <h2>Detalle</h2>
+            <ul>
+              <li><a href="mapa-de-servicios.html">Mapa de los 15 servicios</a></li>
+              <li><a href="reservas-por-dentro.html">Reservas por dentro</a></li>
+              <li><a href="contratos.html">Contratos</a></li>
             </ul>
           </body>
           </html>
