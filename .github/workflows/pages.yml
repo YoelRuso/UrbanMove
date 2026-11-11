@@ -2,7 +2,7 @@ name: Publicar diagramas de arquitectura
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
     paths:
       - "docs/01-arquitectura/alternativas/alternativa-*.html"
       - ".github/workflows/pages.yml"
