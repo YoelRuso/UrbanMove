@@ -1,7 +1,7 @@
 ---
 tipo: servicio
 estado: borrador
-responsable: PENDIENTE
+responsable: Joel
 ---
 
 # Inventario de recursos

@@ -39,4 +39,4 @@ el resto son ampliaciones valorables**, pero no dice cuáles son las obligatoria
 - Se empaquetan o despliegan mediante comandos versionados en el pipeline (§10).
 - Pregunta de defensa: qué ocurre si se duplica un evento o si una Lambda falla temporalmente
   (§18). Ver [errores-y-resiliencia.md](../06-estandares/errores-y-resiliencia.md).
-- Ejemplo de carpeta de repositorio: `lambdas/` (§10).
+- Ejemplo de carpeta de repositorio: `src/lambdas/` (§10).

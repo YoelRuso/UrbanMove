@@ -23,46 +23,8 @@ Notificaciones.
 
 ## Reparto real
 
-Reparto inicial acordado en la reunión del 27 de octubre de 2026. Solo cubre los servicios
-para empezar a probar; el resto se repartirá más adelante.
-
-| Miembro | Servicios iniciales | Interfaz | Opcionales | Lambdas | Otros |
-|---|---|---|---|---|---|
-| Joel | [Historial](../02-servicios/historial.md), [Reservas](../02-servicios/reservas.md) | App de mantenimiento y operaciones | [Catálogo de zonas](../02-servicios/catalogo-de-zonas.md), [Batería y telemetría](../02-servicios/bateria-y-telemetria.md), [Incidencias](../02-servicios/incidencias.md), [Adquisiciones](../02-servicios/adquisiciones.md), [Notificaciones](../02-servicios/notificaciones.md) | PENDIENTE | Lo más complejo, cuando se reparta |
-| Oussama | [Identidad](../02-servicios/identidad.md), [Perfiles de usuario](../02-servicios/perfiles-de-usuario.md) | App de usuarios finales | — | PENDIENTE | PENDIENTE |
-| Sergio | [Viajes](../02-servicios/viajes.md), [Disponibilidad](../02-servicios/disponibilidad.md) | Dashboard operativo | — | PENDIENTE | PENDIENTE |
-
-### Pendiente de repartir
-
-Obligatorios (§14) sin responsable todavía:
-
-- [Inventario de recursos](../02-servicios/inventario-de-recursos.md)
-- [Órdenes de mantenimiento](../02-servicios/ordenes-de-mantenimiento.md)
-- [Órdenes de recolocación](../02-servicios/ordenes-de-recolocacion.md)
-- [Analítica operacional](../02-servicios/analitica-operacional.md)
-
-Piezas no asociadas a un servicio:
-
-- [Lambdas](../04-lambdas/README.md) (al menos tres).
-- [Data Lake](../05-datos/data-lake.md) y [data marts](../05-datos/data-marts.md) (al menos
-  cuatro).
-- Tareas conjuntas: bus de eventos, Terraform y despliegue, CI/CD, observabilidad e informe.
-  Se repartirán de forma equitativa.
-
-Criterio acordado: Joel se encarga de las piezas más complejas y el resto se reparte entre
-Oussama y Sergio.
-
-> PENDIENTE: asignar los cuatro servicios obligatorios restantes, las Lambdas y los data marts.
-
-> PENDIENTE: repartir las tareas conjuntas con un responsable principal cada una.
-
-> PENDIENTE: revisar que el reparto final quede equilibrado (§12, rúbrica): con los cinco opcionales y las piezas complejas, Joel acumula mucha más carga que los demás.
-
-> PENDIENTE: actualizar el campo `responsable` del frontmatter de cada fichero del vault.
-
-## Propuesta de reparto
-
-**Pendiente de acordar.** No sustituye al reparto real de arriba.
+Reparto acordado por el grupo el 17 de noviembre de 2026. Sustituye al reparto inicial de la
+reunión del 27 de octubre, que solo cubría los servicios para empezar a probar.
 
 | | Joel | Oussama | Sergio |
 |---|---|---|---|
@@ -73,4 +35,10 @@ Oussama y Sergio.
 | Interfaz | App de usuarios | App de mantenimiento | Dashboard |
 | Datos | [Data Lake](../05-datos/data-lake.md) | | [Data marts](../05-datos/data-marts.md) |
 
-> PENDIENTE: revisar esta propuesta en el grupo y, si se acepta, trasladarla al reparto real.
+Cada responsable de un servicio decide sus detalles; lo que afecta a varios servicios lo decide
+el grupo (ver [acuerdos.md](acuerdos.md)).
+
+### Tareas conjuntas
+
+CI/CD, Terraform y despliegue, bus de eventos, observabilidad e informe no tienen responsable
+fijo: se reparten rotando según vayan haciendo falta, para que todos toquen un poco de todo.
