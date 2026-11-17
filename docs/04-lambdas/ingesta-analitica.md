@@ -1,7 +1,7 @@
 ---
 tipo: lambda
 estado: borrador
-responsable: PENDIENTE
+responsable: Joel
 ---
 
 # Lambda: Ingesta analítica

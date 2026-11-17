@@ -1,7 +1,7 @@
 ---
 tipo: datos
 estado: borrador
-responsable: PENDIENTE
+responsable: Joel
 ---
 
 # Data Lake de eventos (§8, §8.1)

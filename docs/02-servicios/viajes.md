@@ -1,7 +1,7 @@
 ---
 tipo: servicio
 estado: borrador
-responsable: Sergio
+responsable: Joel
 ---
 
 # Viajes

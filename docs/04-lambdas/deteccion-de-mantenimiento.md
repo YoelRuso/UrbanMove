@@ -1,7 +1,7 @@
 ---
 tipo: lambda
 estado: borrador
-responsable: PENDIENTE
+responsable: Oussama
 ---
 
 # Lambda: Detección de mantenimiento

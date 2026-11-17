@@ -1,7 +1,7 @@
 ---
 tipo: datos
 estado: borrador
-responsable: PENDIENTE
+responsable: Sergio
 ---
 
 # Data marts (§8.2)

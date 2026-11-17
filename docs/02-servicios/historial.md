@@ -1,7 +1,7 @@
 ---
 tipo: servicio
 estado: borrador
-responsable: Joel
+responsable: Sergio
 ---
 
 # Historial
@@ -56,7 +56,7 @@ PostgreSQL, con una base de datos propia ([acuerdos.md](../10-equipo/acuerdos.md
   romper reservas ni viajes.
 - Flujo de usuario: "Se genera historial" (§11.1). Flujo de mantenimiento: "El historial y los
   data marts reflejan el cambio" (§11.2).
-- Ejemplo de carpeta de repositorio: `services/history` (§10).
+- Ejemplo de carpeta de repositorio: `src/services/history` (§10).
 
 > PENDIENTE: decidir cómo se recupera el historial tras una caída (reprocesado de eventos, DLQ...).
 

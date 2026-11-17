@@ -31,7 +31,7 @@ services:
 
   # Ejemplo de microservicio (plantilla):
   # reservas:
-  #   build: ./services/reservas
+  #   build: ./src/services/reservas
   #   environment:
   #     AWS_ENDPOINT_URL: http://localstack:4566
   #     AWS_REGION: us-east-1

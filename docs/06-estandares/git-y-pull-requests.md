@@ -27,16 +27,17 @@ Un único repositorio GitHub con esta estructura (provisional):
 
 ```text
 urbanmove/
-├── services/            # un proyecto Spring Boot (Maven) por microservicio
-│   ├── reservas/
-│   ├── viajes/
-│   └── ...
-├── lambdas/             # una carpeta por Lambda (Python)
-├── apps/
-│   ├── usuarios/        # React + Vite
-│   ├── mantenimiento/
-│   └── dashboard/
-├── infra/               # Terraform
+├── src/                 # todo el código
+│   ├── services/        # un proyecto Spring Boot (Maven) por microservicio
+│   │   ├── reservas/
+│   │   ├── viajes/
+│   │   └── ...
+│   ├── lambdas/         # una carpeta por Lambda (Python)
+│   ├── apps/
+│   │   ├── usuarios/    # React + Vite
+│   │   ├── mantenimiento/
+│   │   └── dashboard/
+│   └── infra/           # Terraform
 ├── docs/                # este vault
 ├── docker-compose.yml
 ├── .env.example

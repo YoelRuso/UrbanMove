@@ -1,7 +1,7 @@
 ---
 tipo: servicio
 estado: borrador
-responsable: PENDIENTE
+responsable: Oussama
 ---
 
 # Órdenes de mantenimiento
