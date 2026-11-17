@@ -44,14 +44,15 @@ Referencia a fecha de 2026-10-27, que hay que comprobar al crear el repositorio:
 
 | Pieza | Versión |
 |---|---|
-| Java | 21 (acordado en la reunión). La última LTS es Java 25 |
+| Java | 25 (LTS). Sustituye a Java 21, acordada en la reunión del 27 de octubre |
 | Spring Boot | 4.1.x |
 | Python (Lambdas) | 3.14, el runtime más reciente de Lambda |
 | Terraform | 1.16.x |
 | Node.js | La LTS vigente |
 | LocalStack | 2026.10.3 |
 
-> PENDIENTE: decidir si se mantiene Java 21 o se pasa a Java 25 (LTS más reciente, compatible con Spring Boot 4.1).
+Decidido el 15 de noviembre de 2026: se usa Java 25 (LTS más reciente, compatible con Spring
+Boot 4.1) en lugar de Java 21.
 
 ## Calendario
 
