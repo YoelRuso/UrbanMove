@@ -83,7 +83,7 @@ Secuencia prevista. Se concretará cuando exista el código de los servicios.
    Terraform, apuntando a LocalStack:
 
    ```bash
-   AWS_ENDPOINT_URL=http://localhost:4566 AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test terraform -chdir=infra apply -auto-approve
+   AWS_ENDPOINT_URL=http://localhost:4566 AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test terraform -chdir=src/infra apply -auto-approve
    ```
 
    > PENDIENTE: confirmar la carpeta de Terraform (`src/infra/` es provisional) y si se separan entornos (local, Academy, AWS normal).
